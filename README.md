@@ -54,6 +54,7 @@ To run the ARIBA CARD snakemake pipeline on the cluster, you have to:
 
 Then run:
 ```
+conda activate ariba # if you're not already in the ariba conda environment
 sbatch ariba_card.sbat
 ```
 
