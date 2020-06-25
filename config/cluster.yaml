@@ -1,0 +1,13 @@
+__default__:
+  jobname: "{rule}.{wildcards}"
+  nodes: 1
+  ntaskspernode: 1
+  cpuspertask: 1
+  mempercpu: "1gb"
+  time: "1:00:00"
+  account: "esnitkin1"
+  partition: "standard"
+  mailuser: "UNIQNAME@umich.edu"
+  # mailtype: "BEGIN,END,FAIL" # uncomment this if you want emails for every sub-job
+  output: "logfiles/%x-%j.out"
+
