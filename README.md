@@ -1,5 +1,7 @@
 # Snakemake pipeline to run ARIBA on genomes using the CARD antibiotic resistance database 
 
+Written by Sophie Hoffman & Zena Lapp.
+
 ## Useful links
 
 ARIBA & CARD:
