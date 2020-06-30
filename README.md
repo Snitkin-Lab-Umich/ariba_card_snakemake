@@ -1,12 +1,14 @@
-# Snakemake pipeline to run ARIBA on genomes using the CARD antibiotic resistance database 
+# Snakemake pipeline to run ARIBA on genomes using CARD, PlasmidFinder, or MLST database
 
 Written by Sophie Hoffman & Zena Lapp.
 
 ## Useful links
 
-ARIBA & CARD:
+ARIBA, CARD, PlasmidFinder & MLST:
 - [ARIBA wiki](https://github.com/sanger-pathogens/ariba/wiki)
-- [CARD website](https://card.mcmaster.ca/)
+- [CARD website](https://card.mcmaster.ca/) 
+- [PlasmidFinder website](https://cge.cbs.dtu.dk//services/PlasmidFinder/instructions.php)
+- [MLST github](https://github.com/sanger-pathogens/ariba/wiki/MLST-calling-with-ARIBA)
 
 Snakemake:
 - [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/)
@@ -48,11 +50,12 @@ Useful snakemake arguments:
 - `snakemake` runs the pipeline
 - ` snakemake --dag | dot -Tsvg > dag.svg` creates a dag (this can be super difficult to read with large complex pipelines)
 
-## Running the ARIBA CARD snakemake pipeline on the cluster
+## Running the ARIBA snakemake pipeline on the cluster
 
-To run the ARIBA CARD snakemake pipeline on the cluster, you have to:
+To run the ARIBA snakemake pipeline on the cluster, you have to:
 - Modify your email address in `ariba_card.sbat` and `config/cluster.yaml`
 - Modify the fastq file directory path, and potentially the fastq file R1 suffix in the `snakefile`
+- Choose which database (CARD, PlasmidFinder, or MLST) you want to run, and modify the `db_dir` path to match the location of that database
 
 Then run:
 ```
@@ -66,7 +69,7 @@ squeue -u UNIQNAME
 ```
 
 The pipeline outputs:
-- A `card` directory with a subdirectory for each input genome containing the CARD results
+- An `ariba` directory with a subdirectory for each input genome containing the ARIBA results
 - Two summary files (the most useful output, in my opinion):
-  - `results/card_minimal_results.csv` (contains presence/absence, i.e. match,  results from ARIBA output)
-  - `results/card_all_results.csv` (contains comprhensive results from  ARIBA output, i.e. the following columns for each gene: assembled,match,ref_seq,pct_id,ctg_cov,known_var,novel_var)
+  - `results/ariba_minimal_results.csv` (contains presence/absence, i.e. match,  results from ARIBA output)
+  - `results/ariba_all_results.csv` (contains comprhensive results from  ARIBA output, i.e. the following columns for each gene: assembled,match,ref_seq,pct_id,ctg_cov,known_var,novel_var)
