@@ -9,8 +9,10 @@ fastq_dir = '/nfs/esnitkin/Project_CRE_EIP/Sequence_data/fastq/' #"/path/to/fast
 # fastq file R1 suffix
 fastq_R1_suffix = "_R1_001.fastq.gz" 
 
-# CARD database directory (you can change this if you want to use a different database)
+# path to CARD database directory (you can change this if you want to use a different database)
 db_dir='/nfs/esnitkin/bin_group/database/ariba/CARD/CARD_db/'
+#path to MLST database: '/nfs/esnitkin/bin_group/database/ariba/MLST_db/'
+#path to PlasmidFinder database: '/nfs/esnitkin/bin_group/database/ariba/plasmidfinder/out.plasmidfinder'
 
 # ----------------------------------------------------------------
 
