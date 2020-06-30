@@ -53,14 +53,14 @@ Useful snakemake arguments:
 ## Running the ARIBA snakemake pipeline on the cluster
 
 To run the ARIBA snakemake pipeline on the cluster, you have to:
-- Modify your email address in `ariba_card.sbat` and `config/cluster.yaml`
+- Modify your email address in `ariba.sbat` and `config/cluster.yaml`
 - Modify the fastq file directory path, and potentially the fastq file R1 suffix in the `snakefile`
 - Choose which database (CARD, PlasmidFinder, or MLST) you want to run, and modify the `db_dir` path to match the location of that database
 
 Then run:
 ```
 conda activate ariba # if you're not already in the ariba conda environment
-sbatch ariba_card.sbat
+sbatch ariba.sbat
 ```
 
 You can check your job using:
