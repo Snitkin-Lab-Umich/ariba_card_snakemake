@@ -11,7 +11,8 @@ fastq_R1_suffix = "_R1_001.fastq.gz"
 
 # path to CARD database directory (you can change this if you want to use a different database)
 db_dir='/nfs/esnitkin/bin_group/database/ariba/CARD/CARD_db/'
-#path to MLST database: '/nfs/esnitkin/bin_group/database/ariba/MLST_db/'
+#path to MLST database: '/nfs/esnitkin/bin_group/database/ariba/MLST_db/' 
+#MLST database is organism specific, cd to the directory to find what you want and add it to the path
 #path to PlasmidFinder database: '/nfs/esnitkin/bin_group/database/ariba/plasmidfinder/out.plasmidfinder'
 
 # ----------------------------------------------------------------
