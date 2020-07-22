@@ -10,17 +10,7 @@ ARIBA, CARD, PlasmidFinder & MLST:
 - [PlasmidFinder website](https://cge.cbs.dtu.dk//services/PlasmidFinder/instructions.php)
 - [MLST github](https://github.com/sanger-pathogens/ariba/wiki/MLST-calling-with-ARIBA)
 
-Snakemake:
-- [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/)
-- [Short overview](https://slides.com/johanneskoester/snakemake-short#/)
-- [More detailed overview](https://slides.com/johanneskoester/snakemake-tutorial#/)
-
-## Benefits of snakemake
-- Your analysis is reproducible.
-- You don't have to re-perform computationally intensive tasks early in the pipeline to change downstream analyses or figures.
-- You can easily combine shell, R, python, etc. scritps into one pipeline.
-- You can easily share your pipeline with others.
-- You can submit a single slurm job and snakemake handles submitting the rest of your jobs for you.
+[Snakemake setup](https://github.com/Snitkin-Lab-Umich/Snakemake_setup)
 
 ## Download this repo
 
@@ -29,26 +19,15 @@ First, go to the directory where you want to dowload the repo to. Next, run the 
 git clone https://github.com/Snitkin-Lab-Umich/snakemake_pipelines/ariba_card.git
 ```
 
-## Conda
+## Snakemake and Conda
 
-To [download miniconda](https://docs.conda.io/en/latest/miniconda.html) for linux if you don't already have it:
-```
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-MacOSX-x86_64.sh
-```
+Visit this guide to [snakemake setup](https://github.com/Snitkin-Lab-Umich/Snakemake_setup) (including conda) to get started. 
 
 To create and activate the conda environment:
 ```
 conda env create -f config/env.yaml # you only have to do this once
 conda activate ariba # you have to do this every time 
 ```
-
-## A few basics
-
-Useful snakemake arguments:
-- `snakemake -n` dry-run (to test it out before running it)
-- `snakemake` runs the pipeline
-- ` snakemake --dag | dot -Tsvg > dag.svg` creates a dag (this can be super difficult to read with large complex pipelines)
 
 ## Running the ARIBA snakemake pipeline on the cluster
 
