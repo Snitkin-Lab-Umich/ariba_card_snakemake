@@ -16,7 +16,7 @@ ARIBA, CARD, PlasmidFinder & MLST:
 
 First, go to the directory where you want to dowload the repo to. Next, run the following command:
 ```
-git clone https://github.com/Snitkin-Lab-Umich/snakemake_pipelines/ariba_snakemake.git
+git clone https://github.com/Snitkin-Lab-Umich/ariba_snakemake
 ```
 
 ## Snakemake and Conda
