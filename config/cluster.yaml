@@ -8,6 +8,6 @@ __default__:
   account: "esnitkin1"
   partition: "standard"
   mailuser: "UNIQNAME@umich.edu"
-mailtype: "FAIL" # "BEGIN,END,FAIL" # uncomment this if you want emails for every sub-job (maybe look into how to get no emails at all?)
+  mailtype: "FAIL" # "BEGIN,END,FAIL" # uncomment this if you want emails for every sub-job (maybe look into how to get no emails at all?)
   output: "logfiles/%x-%j.out"
 
